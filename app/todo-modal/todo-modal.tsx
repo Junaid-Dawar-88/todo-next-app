@@ -25,6 +25,7 @@ const TodoModal = ({ todo, setTodo }: Props) => {
   //  { ============= REACT QUERY HOOK ============== }
   const useTodo = usePostMutation();
 
+  //  { ============== CLEAR INPUT FIELD FUNCITON ============ }
   const clearForm = () => {
     setTitle("");
     setDescription("");
@@ -32,7 +33,7 @@ const TodoModal = ({ todo, setTodo }: Props) => {
     setPriority("Medium");
     setIsOpen(false);
   };
-
+  //  { ======================== HANDLE ADD DATA FUNCTION ============= }
   const handleSubmite = async () => {
     if (!title) return alert("Please fill the title field!");
 

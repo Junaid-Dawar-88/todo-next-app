@@ -12,15 +12,15 @@ const TodoTable = () => {
   const [todo, setTodo] = useState<Todo[]>([]);
   const [updateTodo, setUpdateTodo] = useState<Todo[]>([]);
 
-  //  { ========= REACT QUERY HOOKS ========= } 
+  //  { ================ REACT QUERY HOOKS ============== } 
   const getTodo = useGetMutation();
   const deleteTodo = useDeleteMutation();
-  //  { ======= HOOK FOR SEARCHING DATA ======== }
+  //  { ============= HOOK FOR SEARCHING DATA ============ }
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState("");
   const [priorityFilter, setPriorityFilter] = useState("");
 
-  //  { ======= THIS HOOK FOR TO GET ALL DATA ========== }
+  //  { ============ THIS HOOK FOR TO GET ALL DATA ========== }
   useEffect(() => {
     const fetchTodos = async () => {
       try {
