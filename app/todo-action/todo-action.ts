@@ -1,5 +1,9 @@
 'use server'
-import { prisma } from "@/lib/prisma"
+// import { prisma } from "@/lib/prisma"
+
+import { PrismaClient } from "@/generated/prisma/client/index";
+
+const prisma = new PrismaClient();
 
 export interface Todo {
     id: number
